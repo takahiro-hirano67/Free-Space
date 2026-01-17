@@ -1,3 +1,5 @@
+// Free-Space/frontend/components/layout/header.tsx
+
 "use client";
 
 import { Play } from "lucide-react";
@@ -15,6 +17,17 @@ export const Header = () => {
                         <Play className="w-4 h-4 text-white" />
                     </div>
                     <span className="font-semibold text-gray-600">FreeHillsLab / FreeSpace</span>
+                </Link>
+                {/* ホームに戻るボタン */}
+                <Link
+                    href="/home"
+                    className="group flex items-center gap-1.5 mx-2 px-3 py-1.5 rounded-full 
+                    bg-gray-50 border border-gray-200
+                    hover:bg-white hover:border-blue-200 hover:shadow-2xs hover:text-blue-600
+                    transition-all duration-100 cursor-pointer mr-2">
+                    <span className="text-xs font-medium text-gray-600 group-hover:text-blue-600 transition-colors">
+                        ホームに戻る
+                    </span>
                 </Link>
             </div>
         </header>
