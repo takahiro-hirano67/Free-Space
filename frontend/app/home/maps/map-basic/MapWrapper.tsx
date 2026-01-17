@@ -1,5 +1,12 @@
 // Free-Space/frontend/app/home/maps/map-basic/MapWrapper.tsx
 
+/**
+ * このファイルの役割:
+ * - Leafletはwindow/documentに依存するため、サーバーサイドでは動作しない
+ * - dynamic importでMapViewをクライアント専用として読み込む
+ * - page.tsxはサーバーコンポーネントとして、SEO対策やメタデータ設定を担当
+ **/
+
 "use client";
 
 import MarkdownViewer from "@/components/markdown/MarkdownViewer"; // ドキュメント表示用

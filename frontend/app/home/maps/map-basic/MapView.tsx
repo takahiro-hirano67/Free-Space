@@ -66,7 +66,15 @@ export default function MapView() {
                     {/* 権利表記の調整（右下・初期挿入なし） */}
                     <AttributionControl position="bottomright" prefix={false} />
                     {/* 表示画像 */}
-                    <ImageOverlay url="/maps/map/campus_map.jpg" bounds={bounds} attribution="© Example" />
+                    <ImageOverlay
+                        url="/maps/map/campus_map.jpg" // パス
+                        bounds={bounds} // 境界
+                        attribution="© Example" // 権利表記
+                        // 読み込み時のエラーハンドリング
+                        eventHandlers={{
+                            error: () => console.error("画像の読み込みに失敗しました"),
+                        }}
+                    />
 
                     {/* マーカー（中央） */}
                     <Marker
